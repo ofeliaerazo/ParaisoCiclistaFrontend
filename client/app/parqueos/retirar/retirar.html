@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row ">
+    <div class="col-md-6 ">
+      <div>
+        <form ng-submit = "vm.buscar()">
+          <input type="" name="" ng-model = "vm.codigo">
+          <button class="bnt bnt-success" type="submit">BUSCAR</button>
+        </form>
+              <div>
+                <h3 ng-if = "vm.valor">Precio: {{vm.valor}}</h3>
+                <h4>Horas: {{vm.parqueo.horas}}</h4>
+                <h4>Fecha: {{vm.parqueo.fecha}}</h4>
+                <h4>Matricula: {{vm.parqueo.matricula.matricula}}</h4>
+                <h4>Nombre: {{vm.parqueo.idCliente.nombre}}</h4>
+              </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

@@ -8,7 +8,7 @@ angular.module('paraisoCiclistaApp', [
   'ui.router',
   'ui.bootstrap'
 ])
-  .constant("API","http://192.168.1.14:8080/ParaisoCiclistaBackend")
+  .constant("API", "http://localhost:8080/ParaisoCiclistaBackend/api")
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
       .otherwise('/');

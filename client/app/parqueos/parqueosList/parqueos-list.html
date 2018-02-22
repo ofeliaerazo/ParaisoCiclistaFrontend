@@ -1,0 +1,64 @@
+<div class="container">
+	<div class="row" >
+		<h2 class="text-center">PARAISO BICICLETAS </h2>
+		<div col-md-12>
+			<div ng-if = "vm.parqueos">
+			<table class="table table-inverse">
+				<thead>
+					<tr>
+						<th>Codigo</th>
+						<th>Estado</th>
+						<th>Horas</th>
+						<th>Cliente</th>
+						<th>Total Pagar</th>
+						<th>Retirar</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr ng-repeat = "parqueo in vm.parqueos">
+						<td>{{parqueo.codigoFicha}}</td>
+						<td><p ng-if="parqueo.estado">ocupado</p><p ng-if="!parqueo.estado">retirado</p></td>
+						<td>{{parqueo.horas}}</td>
+						<td>{{parqueo.idCliente.nombre}}</td>
+						<td>{{parqueo.precio}}</td>
+						<td><button ng-click = "vm.retirar(parqueo)" ng-if="parqueo.estado">RETIRAR</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+<!--div ng-if = "vm.parqueos">
+
+	
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Codigo</th>
+				<th>Horas</th>
+				<th>Cliente</th>
+				<th>Total Pagar</th>
+				<th>Retirar</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat = "parqueo in vm.parqueos">
+				<td>{{parqueo.codigoFicha}}</td>
+				<td>{{parqueo.horas}}</td>
+				<td>{{parqueo.idCliente.nombre}}</td>
+				<td>{{parqueo.precio}}</td>
+				<td><button class="bnt bnt.primary"ng-click = "vm.retirar(parqueo)">cobrar</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
